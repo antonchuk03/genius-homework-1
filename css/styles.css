@@ -59,8 +59,16 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     margin: 0;
-    background-image: url(../images/background\ \(1\).png);
-    background-position: 1400px;
+    background-image: url(../images/background-new.png);
+    background-repeat: no-repeat;
+    background-position: 51% 62%; 
+    background-size: inherit;
+    background-attachment: local;
+    /* background-position: 1400px; */
+}
+
+* {
+    box-sizing: border-box;
 }
 
 h1,
@@ -159,7 +167,7 @@ ul {
     justify-content: center;
 }
 
-.header-social {
+.icon.header-social {
     display: flex;
     gap: 32px;
     justify-content: center;
@@ -176,9 +184,9 @@ ul {
         rgba(255, 255, 255, 0.193204) 58.65%, 
         rgba(255, 255, 255, 0) 72.78%
         ),
-        url(../images/hero-section-background.jpg);
+        url(../images/woman-makes-face-massage.png);
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: top;
 }
 
 .hero-container {
@@ -223,6 +231,7 @@ ul {
 /* About section */
 .about-container {
     padding-top: 96px;
+    padding-bottom: 80px;
     gap: 32px;
     display: flex;
     justify-content: space-between;
@@ -237,24 +246,26 @@ ul {
 }
 
 .about-images {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    position: relative;
     justify-content: space-between;
     width: 499px;
     height: 695px;
 }
 
-.about-images img {
+.image-woman {
     border-radius: 50%;
-    overflow: hidden;
+}
+
+.image-woman.after {
+    align-self: flex-end;
 }
 
 .about-title {
     margin: 0;
     text-align: left;
-    padding-top: 96px;
     margin: 0;
     font-family: 'Play', sans-serif;
     font-weight: 700;
@@ -339,6 +350,7 @@ ul {
 /* Procedures section */
 .procedures-container {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 32px;
     padding-top: 48px;
@@ -346,7 +358,7 @@ ul {
 
 .procedures-list {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     gap: 16px;
 }
 
@@ -355,6 +367,10 @@ ul {
 }
 
 .procedures-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     width: 320px;
     height: 456px;
     padding: 24px;
@@ -364,19 +380,26 @@ ul {
         rgba(1, 28, 68, 0.725825) 84.61%,
         var(--color-primary-dark) 101.39%
         );
-        border: 1px solid blue;
-        border-radius: 120px 4px;
-        transform: scale(-1, 1);
+    border-radius: 4px 120px;
+    overflow: hidden;
+}
+
+.card-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .procedures-text {
+    align-items: center;
     text-align: center;
-    color: black;
-    /* color: var(--color-light); */
+    color: var(--color-light);
     margin: 0;
     font-size: 22px;
     line-height: 1.2;
-    transform: scale(-1, 1);
 }
 
 /* Carousel */
@@ -408,14 +431,14 @@ ul {
 
 /* Contact section */
 .contact-section {
-    padding-bottom: 95px;
+    padding-bottom: 96px;
 }
 
 .contact-container {
     display: flex;
+    justify-content: center;
     padding-top: 48px;
     gap: 32px;
-    height: 481px;
 }
 
 .contact-map {
@@ -426,9 +449,8 @@ ul {
 }
 
 .modal.contact-modal {
-    width: 310px; 
-    height: 100%;
-    max-height: 385px;
+    width: 422px; 
+    height: 482px;
     padding: 48px 57px;
 }
 
@@ -443,6 +465,17 @@ ul {
     background-position: center;
 }
 
+.footer::after {
+    position: absolute;
+    bottom: 0;
+    background-repeat: no-repeat;
+    content: '';
+    width: 380px;
+    height: 190px;
+    right: 0;
+    background-image: url(../images/cosmetics.png);
+}
+
 .footer-container {
     display: flex;
     padding: 56px 0;
@@ -453,7 +486,7 @@ ul {
 .footer-address {
     display: flex;
     flex-basis: 50%;
-    gap: 20px;
+    gap: 74px; 
 }
 
 .footer-logo,
@@ -466,6 +499,11 @@ ul {
     flex-grow: 1;
 }
 
+.icon {
+    display: flex;
+    gap: 24px;
+}
+
 .address-link {
     color: var(--color-light);
     font-size: 16px;
@@ -475,10 +513,11 @@ ul {
 .address-copyright {
     font-size: 13px;
     color: var(--color-dark);
+    padding-top: 16px;
 }
 
 .address-icon {
-    background: #FFFFFF;
+    fill: var(--color-light);
 }
 
 .link-footer {
@@ -492,6 +531,10 @@ ul {
 .address-link:hover,
 .link-footer:hover {
     color: var(--color-primary-light);
+}
+
+.footer-list {
+    padding-bottom: 16px;
 }
 
 
@@ -519,9 +562,9 @@ ul {
 .modal {
     position: relative;
     width: 100%;
-    max-width: 435px;
+    max-width: 723px;
     height: 100%;
-    max-height: 597px;
+    max-height: 681px;
     padding: 42px 144px;
     background-color: #FFFFFF;
     background-color: var(--color-primary-dark);
@@ -552,6 +595,8 @@ ul {
 
 .modal-btn-close {
     position: absolute;
+    background: transparent;
+    cursor: pointer;
     top: 42px;
     right: 42px;
 }

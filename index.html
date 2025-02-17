@@ -25,24 +25,24 @@
               </li>
               <li><a class="link" href="#contact-section">Контакти</a></li>
             </ul>
-            <ul class="header-social">
+            <ul class="icon header-social">
               <li>
                 <a href="#">
-                  <svg class="social-icon" width="32px" height="32px">
+                  <svg width="32px" height="32px">
                     <use href="./images/icons.svg#icon-phone"></use>
                   </svg>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <svg class="social-icon" width="32px" height="32px">
+                  <svg width="32px" height="32px">
                     <use href="./images/icons.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <svg class="social-icon" width="32px" height="32px">
+                  <svg width="32px" height="32px">
                     <use href="./images/icons.svg#icon-instagram"></use>
                   </svg>
                 </a>
@@ -92,8 +92,16 @@
               </p>
             </div>
             <div class="about-images">
-              <img src="./images/woman-before.jpg" alt="Жінка до процедури" />
-              <img src="./images/woman-after.jpg" alt="Жінка після процедури" />
+              <img
+                class="image-woman"
+                src="./images/woman-before.jpg"
+                alt="Жінка до процедури"
+              />
+              <img
+                class="image-woman after"
+                src="./images/woman-after.jpg"
+                alt="Жінка після процедури"
+              />
             </div>
           </div>
         </div>
@@ -163,16 +171,31 @@
             <ul class="procedures-list">
               <li class="procedures-item">
                 <article class="procedures-card">
+                  <img
+                    class="card-image"
+                    src="./images/procedures-1.jpg"
+                    alt="Маски для обличчя"
+                  />
                   <h3 class="procedures-text">Маски для обличчя</h3>
                 </article>
               </li>
               <li class="procedures-item">
                 <article class="procedures-card">
+                  <img
+                    class="card-image"
+                    src="./images/procedures-2.jpg"
+                    alt="Ін'єкції для обличчя"
+                  />
                   <h3 class="procedures-text">Ін'єкції для обличчя</h3>
                 </article>
               </li>
               <li class="procedures-item">
                 <article class="procedures-card">
+                  <img
+                    class="card-image"
+                    src="./images/procedures-3.jpg"
+                    alt="Очищення обличчя"
+                  />
                   <h3 class="procedures-text">Очищення обличчя</h3>
                 </article>
               </li>
@@ -278,49 +301,62 @@
               </a>
             </div>
             <ul class="footer-menu">
-              <li><a class="link-footer" href="#about-section">Про нас</a></li>
-              <li><a class="link-footer" href="#why-section">Чому ми</a></li>
-              <li>
+              <li class="footer-list">
+                <a class="link-footer" href="#about-section">Про нас</a>
+              </li>
+              <li class="footer-list">
+                <a class="link-footer" href="#why-section">Чому ми</a>
+              </li>
+              <li class="footer-list">
                 <a class="link-footer" href="#procedures-section"
                   >Наші процедури</a
                 >
               </li>
-              <li>
+              <li class="footer-list">
                 <a class="link-footer" href="#contact-section">Контакти</a>
               </li>
             </ul>
           </nav>
           <address class="footer-address">
-            <ul class="address-list">
-              <li><a class="link-footer" href="">+ 38 (096) 000 00 07</a></li>
-              <li><a class="link-footer" href="">beautyzone@gmail.com</a></li>
-              <li>
-                <a class="link-footer" href=""
-                  >Україна, м. Київ, вул. Тараса Шевченка 5</a
-                >
-              </li>
-              <li>
+            <div class="address-contacts">
+              <ul class="address-list">
+                <li class="footer-list">
+                  <a class="link-footer" href="tel:+380960000007"
+                    >+ 38 (096) 000 00 07</a
+                  >
+                </li>
+                <li class="footer-list">
+                  <a class="link-footer" href="mailto:beautyzone@gmail.com"
+                    >beautyzone@gmail.com</a
+                  >
+                </li>
+                <li class="footer-list">
+                  <a
+                    class="link-footer"
+                    href="https://maps.app.goo.gl/c91cHDkyb5mFYni66"
+                    target="_blank"
+                    >Україна, м. Київ, вул. Тараса Шевченка 5</a
+                  >
+                </li>
+              </ul>
+              <div class="icon">
                 <a href="#">
                   <svg class="address-icon" width="42px" height="42px">
                     <use href="./images/icons.svg#icon-phone"></use>
                   </svg>
                 </a>
-              </li>
-              <li>
                 <a href="#">
                   <svg class="address-icon" width="42px" height="42px">
                     <use href="./images/icons.svg#icon-facebook"></use>
                   </svg>
                 </a>
-              </li>
-              <li>
                 <a href="#">
-                  <svg class="address-icon" width="42px" height="42px">
+                  <svg class="address-icon" width="42" height="42">
                     <use href="./images/icons.svg#icon-instagram"></use>
                   </svg>
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
             <div class="address-info">
               <a class="address-link" href="#">Політика конфіденційності</a>
               <p class="address-copyright">&copy; 2025 Дані захищені</p>
@@ -332,7 +368,9 @@
 
     <div class="backdrop is-hidden">
       <div class="modal">
-        <button type="button" class="modal-btn-close">Close</button>
+        <button type="button" class="modal-btn-close">
+          <img src="./images/icon-close.png" alt="icon-close" />
+        </button>
         <h2>
           Замовити <br />
           дзвінок
