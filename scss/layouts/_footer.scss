@@ -1,0 +1,63 @@
+.footer {
+    padding: 0;
+    position: relative;
+    background-color: var(--color-primary-dark);
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+        background-repeat: no-repeat;
+        content: '';
+        width: 380px;
+        height: 190px;
+        right: 0;
+        background-image: url(../images/cosmetics.png);
+    }
+
+    &__container {
+        display: flex;
+        padding: 56px 0;
+        gap: 20px;
+    }
+
+    &__nav,
+    &__address {
+        display: flex;
+        flex-basis: 50%;
+        gap: 74px;
+    }
+
+    &__logo,
+    &__menu {
+        flex-grow: 1;
+    }
+
+    &__list {
+        padding-bottom: 16px;
+    }
+
+    &__address-list,
+    &__address-info {
+        flex-grow: 1;
+    }
+
+    &__address-link {
+        color: var(--color-light);
+        font-size: 16px;
+        text-decoration: none;
+
+        &:hover {
+            color: var(--color-primary-light);
+        }
+    }
+
+    &__address-copyright {
+        font-size: 13px;
+        color: var(--color-dark);
+        padding-top: 16px;
+    }
+}

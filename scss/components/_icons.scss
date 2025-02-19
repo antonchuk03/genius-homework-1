@@ -1,0 +1,12 @@
+.icon {
+    display: flex;
+    gap: 24px;
+
+    &.header-social {
+        gap: 32px;
+    }
+
+    &.address-icon {
+        fill: var(--color-light);
+    }
+}

@@ -1,0 +1,18 @@
+.link {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+
+    &:hover,
+    &.link-footer:hover {
+        color: var(--color-primary-light);
+    }
+
+    &.link-footer {
+        color: var(--color-light);
+        font-size: 16px;
+    }
+}
+

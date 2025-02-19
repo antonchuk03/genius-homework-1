@@ -1,0 +1,39 @@
+.input {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+
+    &__label {
+        position: absolute;
+        top: 18px;
+        left: 33px;
+    }
+
+    &__control {
+        padding: 18px 33px;
+        width: 100%;
+        max-width: 240px;
+        font-size: 13px;
+        line-height: 1.17;
+        border: 2px solid var(--color-dark);
+        color: var(--color-light);
+        border-radius: 32px;
+        background-color: transparent;
+
+        &:focus {
+            background-color: var(--color-dark);
+            outline: none;
+        }
+
+        &::placeholder {
+            color: var(--color-light);
+            font-size: 13px;
+            line-height: 1.17;
+        }
+    }
+
+    &__button {
+        display: block;
+        margin: 0 auto 8px;
+    }
+}

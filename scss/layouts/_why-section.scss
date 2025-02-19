@@ -1,0 +1,10 @@
+.why-section {
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 56px;
+        padding-top: 48px;
+    }
+}

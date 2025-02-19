@@ -1,0 +1,39 @@
+body {
+    color: var(--color-primary-dark);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    background-image: url(../images/background-new.png);
+    background-repeat: no-repeat;
+    background-position: 51% 78%;
+    background-size: contain;
+    background-attachment: local;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+}
+
+img {
+    //обов'язково
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; //не розтягується картинка
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

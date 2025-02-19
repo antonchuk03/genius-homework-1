@@ -1,0 +1,99 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.5;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        scale: 1;
+    }
+}
+
+.about-section {
+    &__container {
+        padding-top: 96px;
+        padding-bottom: 80px;
+        gap: 32px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        width: 709px;
+        height: 520px;
+    }
+
+    &__title {
+        margin: 0;
+        text-align: left;
+        font-family: 'Play', sans-serif;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 1.2;
+    }
+
+    &__text {
+        font-size: 22px;
+        line-height: 1.7;
+        padding-top: 40px;
+        margin: 0;
+    }
+
+    &__images {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 499px;
+        height: 695px;
+
+        &::before {
+            position: absolute;
+            top: 20px;
+            right: -20px;
+            content: url(../images/star-2.png);
+            z-index: 1;
+    
+            animation-name: spin;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+    
+        &::after {
+            position: absolute;
+            top: 300px;
+            right: 150px;
+            content: url(../images/star-1.png);
+            z-index: 1;
+    
+            animation-name: spin;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    &__image-woman {
+        border-radius: 50%;
+
+        &.after {
+            align-self: flex-end;
+        }
+    }
+}
+
+
+
+
+
+
